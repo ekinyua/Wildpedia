@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;1,200;1,300;1,400&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: poppins;
+    box-sizing: border-box;
+}
+
+body{
+    align-items: center;
+    text-align: justify;
+    /*background-size: cover;*/
+    background-image: url("/static/img/background6.jpg");
+    width: 95vw;
+    height: 100%;
+    margin: auto;
+}
+
+.header{
+    display: flex;
+    flex-direction: row;
+    color: black;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 100%;
+    padding: 2px 100px;
+    background: rgba(255, 255, 255, .1);
+    backdrop-filter: blur(25px);
+    border-radius: 25px;
+    border-bottom: 1px solid white;
+    margin: 5px;
+}
+
+.header a{
+    color: white;
+}
+
+.header .navigation a{
+    margin-left: 20px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    position: relative;
+}
+
+.navigation a::before{
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    height: 2px;
+    width: 00%;
+    background: white;
+    transition: .3s;
+}
+
+.navigation a:hover::before{
+    width: 100%;
+}
+
+.logo{
+    height: 5vw;
+    width: 5vw;
+    float: left;
+    display: inline-flex;
+}
+
+.heading{
+    display: flex;
+    flex-direction: column;
+    color: black;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 600px;
+    padding: 2px 100px;
+    background: rgba(255, 255, 255, .1);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border: 1px solid white;
+    margin: auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    background: url(/static/img/elephant_3.jpg);
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 5px;
+}
+
+.about{
+    display: flex;
+    flex-direction: row;
+    height: 500px;
+    background: rgba(255, 255, 255, .1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.about > * {
+    flex: 1;
+    padding: 10px;
+    object-fit: cover;
+    color: white;
+}
+
+.about > img{
+    padding: 0px;
+    border:1px solid white;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.about-cont{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.key-players{
+    color: white;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.img-players{
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    margin: auto;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    justify-content: center;
+    justify-content: space-evenly;
+}
+
+.img-players > figure > a >img{
+    width: 200px;
+    height: 130px;
+}
+
+#sheldrick{
+    width: 130px;
+}
+
+#zsl{
+    width: 150px;
+    height: 130px;
+}
+
+#kws{
+    height: 130px;
+}
+
+.players-wrap{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+/* .heading{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    background-image: url(img/elephant.jpg);
+    background-size: cover;
+    background-position: center;
+    filter: brightness(70%);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+} */
+
+.heading-h{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    justify-self: center;
+    color: white;
+}
+
+.heading-button a{
+    text-decoration: none;
+    color: black;
+}
+
+.heading-button{
+    width: 150px;
+    height: 40px;
+    border-radius: 40px;
+    background: #fff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 600;
+
+}
+
+.par-heading{
+    color: white
+}
+
+.icons{
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+}
+
+.icons > li > a > img{
+    margin: 10px;
+}
+
+footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: white;
+    text-align: center;
+    border-radius: 10px;
+    margin: 5px;
+
+}
+

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <title>WildPedia</title>
+</head>
+<body>
+
+    <div class="wrapper">
+        <header class="header">  <!--dark background -->
+            <img src="../static/img/WildPedia_logo.png" alt="WildPedia Logo" class="logo">
+            {% if current_user.is_authenticated %}
+            <nav class="navigation">
+                <a href="{{url_for('views.home')}}"> Home </a>
+                <a href="{{url_for('views.reports')}}"> Report </a>
+                <a href="#about"> About </a>
+                <a href="#players"> Players </a>
+                <a href=""> Contact </a>
+                 <a href="{{url_for('auth.logout')}}"> Logout </a>
+                {% else %}
+                <a href="{{url_for('views.home')}}"> Home </a>
+                <a href="{{url_for('auth.login')}}"> Login </a>
+                <a href="#about"> About </a>
+                <a href="#players"> Players </a>
+                <a href=""> Contact </a>
+                {% endif %}
+            </nav>
+
+        </header>
+
+        <div class="heading">
+            <h2 class="heading-h"> <i>Promoting Wildlife Conservation Education </i></h2>
+            <p class="par-heading"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut nobis, maxime doloribus sequi ab nulla voluptatem temporibus maiores, aspernatur delectus natus quam beatae nesciunt reiciendis quis enim est esse accusamus.</p>
+            <button class="heading-button"> <a href="{{url_for('auth.register')}}"> Get involved! </a></button>
+
+        </div>
+        <div class="about" id="about">
+            <img src="../static/img/elephant_2.jpg" alt="Elephant">
+            <div class="about-cont">
+                <h2> What is WildPedia? </h2>
+                <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum dolores quibusdam officiis, quod asperiores unde eius, accusamus sed et perferendis delectus aliquam! Ipsa reiciendis repudiandae dolores enim rerum nulla libero!</p>
+                <!-- add a background image here -->
+            </div>
+        </div>
+
+        <div class="key-players" id="players">
+            <h2> Key Players spearheading Wildlife Conservation Efforts </h2>
+            <p> Are you a key partner looking to amplify your voice? Reach out to us and get featured for free</p>
+
+            <div class="players-wrap">
+                <div class="img-players">
+                    <figure>
+                        <a href="https://www.kws.go.ke/">
+                        <img src="../static/img/KWS%20Logo.png" alt="Kenya Wildlife Service" id="kws">
+                        </a>
+                        <figcaption>Kenya Wildlife Service</figcaption>
+                        </figure>
+                    <figure>
+                        <a href="https://tsavotrust.org/">
+                        <img src="../static/img/Tsavo-Web-logo-white.png" alt="Tsavo Trust" id="tt">
+                        </a>
+                        <figcaption>Tsavo Trust</figcaption>
+                    </figure>
+                </div>
+
+                <div class="img-players">
+                    <figure>
+                        <a href="https://www.sheldrickwildlifetrust.org/">
+                        <img src="../static/img/Sheldrick%20Wildlife%20Trust%20Logo.png" alt="Sheldrick Wildlife Trust" id="sheldrick">
+                        </a>
+                        <figcaption>Sheldrick Wildlife Trust</figcaption>
+
+                    </figure>
+                    <figure>
+                        <a href="https://www.zsl.org/">
+                        <img src="../static/img/Zoological_Society_of_London_(ZSL)_logo.svg.png" alt="Zoological Society of London" id="zsl">
+                        </a>
+                        <figcaption>Zoological Society of London</figcaption>
+                    </figure>
+                </div>
+            </div>
+
+        </div>
+
+        <footer id="contact">
+            <div class="social-icons">
+                <ul class="icons">
+                    <li><a href="https://www.facebook.com/"><img src="../static/img/fb.svg" alt=""></a></li>
+                    <li><a href="https://www.instagram.com/"><img src="../static/img/insta.svg" alt=""></a></li>
+                    <li><a href="https://twitter.com/login?lang=en"><img src="../static/img/Twitter%20(2).svg" alt=""></a></li>
+                    <li><a href="https://www.linkedin.com/login"><img src="../static/img/Linkedin.svg" alt=""></a></li>
+                </ul>
+            </div>
+            <div class="footer">
+                <span><p>Contact us at <a href="mailto:vulgenceelvis@gmail.com">wildpedia@gmail.com </a> </p></span>
+                <span><p> Copyright &#169 2023 All rights served</p></span>
+            </div>
+        </footer>
+
+    </div>
+</body>
+</html>

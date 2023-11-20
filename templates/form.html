@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <title>Incident Reporting</title>
+</head>
+<body>
+
+    <section>
+        <div class="form-box1">
+            <div class="form-value">
+                <form action="" method="POST">
+                    <h2>Incident Reporting</h2>
+                    <div class="inputbox">
+                        <input type="text" id="incident-title" name="title">
+                        <label for="incident-title">Title:</label>
+                    </div>
+                    <div class="inputbox">
+                        <input type="text" id="incident-description" name="content">
+                        <label for="incident-description">Please give a description of the incident:</label>
+                    </div>
+                    <div class="inputbox">
+                        <input type="text" id="incident-location" name="location">
+                        <label for="incident-location">Location of Incident:</label>
+                    </div>
+                    <div class="inputbox">
+                        <!-- <ion-icon name="mail-outline"></ion-icon> -->
+                        <input type="date" id="incident-date" name="date_created">
+                        <label for="incident-date">Date of Incident</label>
+                    </div>
+                    <button type="submit"> Submit </button>
+                    <div class="register">
+                        <p>Thank you for your report!</p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
